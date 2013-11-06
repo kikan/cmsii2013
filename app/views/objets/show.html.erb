@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Libelle:</strong>
+  <%= @objet.libelle %>
+</p>
+
+<p>
+  <strong>Valeur:</strong>
+  <%= @objet.valeur %>
+</p>
+
+<p>
+  <strong>Catégorie:</strong>
+  <%= @objet.categorie.try(:libelle) %>
+</p>
+
+<%= link_to 'Edit', edit_objet_path(@objet) %> |
+<%= link_to 'Back', objets_path %>
