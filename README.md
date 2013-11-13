@@ -46,7 +46,7 @@ Les formulaires contenant des sous-formulaire doivent utiliser le helper `nested
 Définissez que votre objet principal, celui qui en contient un autre, peut avoir des attributs nichés :
 
 ```ruby
-  # app/models/objets_principal.rb
+  # app/models/objet_principal.rb
   class ObjetPrincipal < ActiveRecord::Base
     has_many: sous_objets
     accepts_nested_attributes_for :sous_objets, allow_destroy: true
