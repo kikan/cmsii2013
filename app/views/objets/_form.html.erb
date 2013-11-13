@@ -19,6 +19,14 @@
     <%= f.label :valeur %><br>
     <%= f.text_field :valeur %>
   </div>
+
+  <!-- Ajout d'un champ pour choisir la catégorie -->
+  <div class="field">
+    <%= f.label :categorie_id %><br>
+    <%= f.collection_select :categorie_id, 
+              Categorie.all, :id, :libelle %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

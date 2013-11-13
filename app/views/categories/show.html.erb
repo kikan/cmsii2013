@@ -10,5 +10,14 @@
   <%= @categorie.fichier_image %>
 </p>
 
+<p>
+  <strong>Liste des objets</strong>
+  <ul>    
+    <% @categorie.objets.each do |objet| %>
+      <li><%= link_to objet.libelle, objet %></li>
+    <% end %>
+  </ul>
+</p>
+
 <%= link_to 'Edit', edit_categorie_path(@categorie) %> |
 <%= link_to 'Back', categories_path %>

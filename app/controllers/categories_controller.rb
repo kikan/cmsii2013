@@ -69,6 +69,6 @@ class CategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def categorie_params
-      params.require(:categorie).permit(:libelle, :fichier_image)
+      params.require(:categorie).permit(:libelle, :fichier_image, objets_attributes:[:id, :libelle, :valeur])
     end
 end

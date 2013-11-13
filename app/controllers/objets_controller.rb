@@ -69,6 +69,6 @@ class ObjetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def objet_params
-      params.require(:objet).permit(:libelle, :valeur)
+      params.require(:objet).permit(:libelle, :valeur, :categorie_id)
     end
 end

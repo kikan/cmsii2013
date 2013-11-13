@@ -12,7 +12,9 @@
 
 <p>
   <strong>Catégorie:</strong>
-  <%= @objet.categorie.try(:libelle) %>
+  <% if @objet.categorie %>
+    <%= link_to @objet.categorie.libelle, @objet.categorie %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_objet_path(@objet) %> |
