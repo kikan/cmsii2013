@@ -27,6 +27,13 @@
               Categorie.all, :id, :libelle %>
   </div>
 
+  <!-- Envoi d'un fichier de photo -->
+  <div class="field">
+    <%= f.label :fichier_image %>    
+    <%= f.file_field :fichier_image %>
+  </div>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>

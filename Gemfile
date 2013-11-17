@@ -33,6 +33,11 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# Bootstrap twitter
+gem 'anjlab-bootstrap-rails', '~> 3.0.2.0', :require => 'bootstrap-rails'
+# gem 'bootstrap-datepicker-rails'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
@@ -43,6 +48,8 @@ end
 # gem 'capistrano', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'debugger', group: [:development, :test]
 
 gem 'turn'
+
+gem 'dropzonejs-rails'

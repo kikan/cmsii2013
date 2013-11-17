@@ -1,4 +1,4 @@
-<%= nested_form_for(@categorie) do |f| %>
+<%= nested_form_for @categorie, html:{class:"-dropzone"} do |f| %>
   <% if @categorie.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@categorie.errors.count, "error") %> prohibited this categorie from being saved:</h2>
@@ -15,12 +15,13 @@
     <%= f.label :libelle %><br>
     <%= f.text_field :libelle %>
   </div>
-  <div class="field">
-    <%= f.label :fichier_image %><br>
-    <%= f.text_field :fichier_image %>
-  </div>
 
   <div class="field">
+    <%= f.label :fichier_image %><br>
+    <%= f.file_field :fichier_image %>
+  </div>
+
+  <div class="field well">
     <%= f.fields_for :objets %>
     <%= f.link_to_add "Ajouter un objet", :objets %>
   </div>

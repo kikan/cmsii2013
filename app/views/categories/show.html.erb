@@ -19,5 +19,10 @@
   </ul>
 </p>
 
+<p>
+  <strong>Image</strong>
+  <%= image_tag "../uploads/categories/#{@categorie.id}" %>
+</p>
+
 <%= link_to 'Edit', edit_categorie_path(@categorie) %> |
 <%= link_to 'Back', categories_path %>

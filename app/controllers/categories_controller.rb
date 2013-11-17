@@ -28,6 +28,7 @@ class CategoriesController < ApplicationController
 
     respond_to do |format|
       if @categorie.save
+        sauve_fichier_pour @categorie
         format.html { redirect_to @categorie, notice: 'Categorie was successfully created.' }
         format.json { render action: 'show', status: :created, location: @categorie }
       else
@@ -42,6 +43,7 @@ class CategoriesController < ApplicationController
   def update
     respond_to do |format|
       if @categorie.update(categorie_params)
+        sauve_fichier_pour @categorie
         format.html { redirect_to @categorie, notice: 'Categorie was successfully updated.' }
         format.json { head :no_content }
       else
@@ -61,6 +63,22 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def sauve_fichier_pour(o)
+    return unless @uploaded_io
+    # Création d'un répertoire pour stocker l'image
+    chemin_stockage_fichiers = Rails.root.join('public', 'uploads', o.class.table_name).to_s
+    FileUtils.mkdir_p chemin_stockage_fichiers
+
+    # Stockage
+    if @uploaded_io.is_a? ActionDispatch::Http::UploadedFile
+      FileUtils.mv @uploaded_io.tempfile, chemin_stockage_fichiers+"/#{o.id}"
+    else
+      File.open(chemin_stockage_fichiers+"/#{o.id}", 'wb') do |file|
+        file.write(@uploaded_io.read)
+      end    
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_categorie
@@ -69,6 +87,7 @@ class CategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def categorie_params
-      params.require(:categorie).permit(:libelle, :fichier_image, objets_attributes:[:id, :libelle, :valeur])
+      @uploaded_io = params.delete(:file)||params[:categorie].delete(:fichier_image)
+      params.require(:categorie).permit(:libelle, :fichier_image, objets_attributes:[:id, :libelle, :valeur, :_destroy])
     end
 end
