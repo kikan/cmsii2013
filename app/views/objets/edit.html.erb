@@ -2,5 +2,11 @@
 
 <%= render 'form' %>
 
+
+<pre>
+  Ici, on affiche l'heure qu'il était quand on a fait le show
+  <%= session[:heure] %>
+</pre>
+
 <%= link_to 'Show', @objet %> |
 <%= link_to 'Back', objets_path %>

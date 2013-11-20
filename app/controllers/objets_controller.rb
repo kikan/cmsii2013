@@ -10,6 +10,7 @@ class ObjetsController < ApplicationController
   # GET /objets/1
   # GET /objets/1.json
   def show
+    session[:heure] = Time.now
   end
 
   # GET /objets/new

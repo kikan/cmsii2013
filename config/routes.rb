@@ -1,7 +1,12 @@
 Projet::Application.routes.draw do
-  resources :objets
+  resources :users
 
+  resources :objets
   resources :categories
+  
+  get '/login' => 'authentification#login'
+  get '/logout' => 'authentification#logout'
+  post '/login' => 'authentification#verification_user_password'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
