@@ -84,7 +84,7 @@ En jQuery avec Javascript, une page chargée se traduit par l'appel de la métho
 ```javascript
  $(function() {
     /* Le code a exécuter une fois la page chargée */
- }
+ })
 ```
 
 Comme nous utiliserons [CoffeeScript](http://coffeescript.org/), nous allons adapter ce fonctionnement :
@@ -94,7 +94,7 @@ Comme nous utiliserons [CoffeeScript](http://coffeescript.org/), nous allons ada
    # Le code a exécuter une fois la page chargée
 ```
 
-Trouvez tous les liens intéressants à rendre plus beaux (les liens pour appeler les pages /new, ou les boutons d'inputs dont le texte contient 'Update' ou 'Create', ainsi que les liens dont la classe est 'remove_nested_fields').
+Grâce à jQuery et ses selecteurs, trouvez tous les liens intéressants à rendre plus beaux (les liens pour appeler les pages /new, ou les boutons d'inputs dont le texte contient 'Update' ou 'Create', ainsi que les liens dont la classe est 'remove_nested_fields').
 
 Ajouter la possibilité de mettre une photo pour un objet
 ---
