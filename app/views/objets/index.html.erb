@@ -19,11 +19,23 @@
         <td><%= link_to 'Show', objet %></td>
         <td><%= link_to 'Edit', edit_objet_path(objet) %></td>
         <td><%= link_to 'Destroy', objet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <td>
+             <!-- UJS : Unobstrusive JavaScript -->
+             <button class="btn btn-success ajouter_au_panier"                     
+                       id="<%= objet.id %>">
+               Ajouter au panier
+             </button>
+        </td>
+    </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Objet', new_objet_path %>
+<h3>Contenu du panier</h3>
+<div id="contenu_du_panier">Ici, on affichera le retour ajax</div>
+
+<%= link_to 'New Objet', new_objet_path, class:"btn btn-success" %>
+
+

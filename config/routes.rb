@@ -1,6 +1,7 @@
 Projet::Application.routes.draw do
-  resources :objets
+  get "panier/ajouter/:objet_id" => 'panier#ajouter', as: :ajouter_objet_au_panier
 
+  resources :objets
   resources :categories
 
   root 'objets#index'
