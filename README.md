@@ -1,7 +1,7 @@
 cmsii2013
 =========
 
-Le sujet de projet à rendre (pour la fin du mois de janvier 2014) [se trouve ici](sujet-projet-a-rendre).
+Le sujet de projet à rendre (pour la fin du mois de janvier 2014) [se trouve ici](sujet-projet-a-rendre.md).
 
 <hr />
 
