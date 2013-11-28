@@ -42,7 +42,7 @@ Vous avez en principe tous les ingrédients techniques pour réaliser ce projet.
 - Par binôme
 - Par courriel, zippé, à [mon adresse](mailto:christian@pennaforte.net) en précisant les membres du binôme dans le sujet ET dans un fichier README du projet.
 
-Pour récupérer vos sources depuis Nitrous.io : utilisez la commmande `scp` depuis votre propre micro pour vous connecter à votre box Nitrous (si vous êtes sous Windows, [WinSCP](http://winscp.net/eng/docs/lang:fr) devrait faire l'affaire. Pensez à le faire régulièrement, on ne sait jamais (Nitrous.io est encore en bêta).
+Pour récupérer vos sources depuis [Nitrous.io](http://nitrous.io) : utilisez la commmande `scp` depuis votre propre micro pour vous connecter à votre box Nitrous (si vous êtes sous Windows, [WinSCP](http://winscp.net/eng/docs/lang:fr) devrait faire l'affaire. Pensez à le faire régulièrement, on ne sait jamais (Nitrous.io est encore en bêta).
 
 Un conseil : n'attendez pas le dernier moment, parce que vous aurez tout oublié. Commencez au plus tôt, vous serez plus à l'aise et plus vite quitte !
 
