@@ -33,6 +33,7 @@ Vous avez en principe tous les ingrédients techniques pour réaliser ce projet.
 
 - respect du cahier des charges
 - respect de la date de rendu des copies
+- ça fonctionne (!)
 - propreté du code
 - ergonomie de l'application
 - créativité (vous avez fait quelque chose de complet, et eu des bonnes idées pour que ça fasse un beau projet)
