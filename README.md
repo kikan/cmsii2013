@@ -1,6 +1,10 @@
 cmsii2013
 =========
 
+Le sujet de projet à rendre (pour la fin du mois de janvier 2014) [se trouve ici](sujet-projet-a-rendre).
+
+<hr />
+
 <img src="doc/diagramme_de_classes.jpg">
 
 Projet étudié en cours en 2013.
