@@ -5,14 +5,14 @@ Le but du projet est de développer une application Web de gestion d'un site mar
 
 **L'application doit permettre de :**
 
-- Se connecter en tant qu'administrateur
+- Se connecter en tant qu'administrateur (gestion de l'authentification à la main ou avec une gem comme [devise](https://github.com/plataformatec/devise))
 
  - Gérer des articles (ajout, modification, suppression), classés par catégories
  - Ajouter des photos aux articles (non-vu en cours pour l'instant, mais vous avez des indications [ici](http://guides.rubyonrails.org/form_helpers.html#uploading-files))
 
 - Être anonyme pour consulter les articles et les catégories
 - Ajouter des articles dans un panier
-- Voir ce qu'il y a dans le panier pour commander (si vous gérez la commande, c'est un plus).
+- Voir ce qu'il y a dans le panier pour commander (si vous gérez la commande ou [l'envoi de courriels](http://guides.rubyonrails.org/action_mailer_basics.html) (aidez-vous de [mailcatcher](http://mailcatcher.me/)), c'est un plus).
 
 
 **Le projet devra montrer que vous savez réutiliser ce que vous avez appris en cours :**
