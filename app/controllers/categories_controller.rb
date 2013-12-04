@@ -70,13 +70,7 @@ class CategoriesController < ApplicationController
     FileUtils.mkdir_p chemin_stockage_fichiers
 
     # Stockage
-    if @uploaded_io.is_a? ActionDispatch::Http::UploadedFile
-      FileUtils.mv @uploaded_io.tempfile, chemin_stockage_fichiers+"/#{o.id}"
-    else
-      File.open(chemin_stockage_fichiers+"/#{o.id}", 'wb') do |file|
-        file.write(@uploaded_io.read)
-      end    
-    end
+    FileUtils.mv @uploaded_io.tempfile, chemin_stockage_fichiers+"/#{o.id}"
   end
 
   private
@@ -87,7 +81,7 @@ class CategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def categorie_params
-      @uploaded_io = params.delete(:file)||params[:categorie].delete(:fichier_image)
+      @uploaded_io = params[:categorie].delete(:fichier_image)
       params.require(:categorie).permit(:libelle, :fichier_image, objets_attributes:[:id, :libelle, :valeur, :_destroy])
     end
 end
