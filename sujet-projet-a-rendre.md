@@ -15,6 +15,7 @@ Le but du projet est de développer une application Web de gestion d'un site mar
 - Voir ce qu'il y a dans le panier pour commander (si vous gérez la commande ou [l'envoi de courriels](http://guides.rubyonrails.org/action_mailer_basics.html) (aidez-vous de [mailcatcher](http://mailcatcher.me/)), c'est un plus).
 
 
+
 **Le projet devra montrer que vous savez réutiliser ce que vous avez appris en cours :**
 
 - Création d'une application Rails
